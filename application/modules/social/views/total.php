@@ -1,0 +1,1 @@
+<?php echo !empty($result[0]->total) ? number_format($result[0]->total) : 0; ?>

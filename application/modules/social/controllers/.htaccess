@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.php/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+ErrorDocument 404 /index.php
+</IfModule>
+
+<IfModule mod_php5.c>
+############################################
+php_value memory_limit 100M
+php_value max_execution_time 180000
+php_value post_max_size 100M
+
+</IfModule> 
