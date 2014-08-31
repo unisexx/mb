@@ -8,20 +8,7 @@ class Public_Controller extends Master_Controller
 		header('Content-type: text/html; charset=UTF-8');
 		$this->template->title('หาเพื่อน หาแฟน หากิ๊ก หาคู่ หาเพื่อนเล่นเกม แลกไอดีไลน์ - LINE2ME');
         
-        $social = $this->uri->segment(1, 0);
-        if($social == 'line'){
-            $this->template->title('หาเพื่อน หาแฟน หากิ๊ก หาคู่ หาเพื่อนเล่นเกม แลกไอดีไลน์ - LINE2ME');
-        }elseif($social == 'instagram'){
-            $this->template->title('หาเพื่อน หาแฟน หากิ๊ก หาคู่ อินสตาแกรม - LINE2ME');
-        }elseif($social == 'whatsapp'){
-            $this->template->title('หาเพื่อน หาแฟน หากิ๊ก หาคู่ whatsapp - LINE2ME');
-        }else{
-            $this->template->title('หาเพื่อน หาแฟน หากิ๊ก หาคู่ หาเพื่อนเล่นเกม แลกไอดีไลน์ - LINE2ME');
-        }
-        
-		// $this->template->set_theme('addfriend');
-    	// $this->template->set_layout('blank');
-    	$this->template->set_theme('addfriend')->set_layout('index');
+    	$this->template->set_theme('mb')->set_layout('home');
 		
 		// Set js
 		$this->lang->load('admin');
